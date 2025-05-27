@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first form</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+
+    <h1>Student Verification Portal</h1><span>Extended</span>
+    <div class="form-body">
+        <form method="post" action="/user/second-form">
+            
+            <div class="for-name">
+                <% if (locals.email) { %>
+                  <input type="hidden" name="email" value="<%= email %>">
+                <% } %>
+               
+                <label for="for-name"> Collage name</label>
+                <input type="text" name="collage" placeholder="collage" required>
+                <label for="">Course name</label>
+                <input type="text" name="course" id="" placeholder="Course XYZ">
+                
+            </div>
+
+            <div class="for-email">
+                <label > Current year </label>
+                <input type="number" name="current_year"  required >
+                <label for="for-email"> Specilization </label>
+                <input type="text" name="specilization" placeholder="AI ML" required>
+            </div>
+            <div class="for-img">
+                <label style="border: 1px solid black;" for="for-img">upload image</label>
+                <input style="display: none;" type="file" accept=".JPEG .PNG .JPG" name="img_path" id="for-img" required>
+            </div>
+            <button type="submit">submit</button>
+
+        </form>
+    </div>
+    <% if (locals.message) { %>
+     
+        <h2 style="color: rgb(0, 255, 128);">USERS DETILES SAVED</h2>
+        
+    <% } %>
+
+</body>
+
+</html>
