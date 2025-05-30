@@ -18,7 +18,7 @@ app.use(session({
     secret: 'your_secret_key',
     resave: false,
     saveUninitialized: true
-}));
+})); 
 
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"));
